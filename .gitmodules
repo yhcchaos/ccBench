@@ -1,10 +1,18 @@
 [submodule "mahimahi"]
 	path = mahimahi
-	url = git@github.com:yhchaos/mahimahi.git
+	url = https://github.com/yhcchaos/mahimahi.git
 [submodule "pantheon-modified/third_party/indigo"]
 	path = pantheon-modified/third_party/indigo
-	url = git@github.com:StanfordSNR/indigo.git
+	url = https://github.com/yhcchaos/indigo.git
 [submodule "pantheon-modified/third_party/vivace"]
 	path = pantheon-modified/third_party/vivace
-	url = https://github.com/PCCproject/PCC-Uspace.git
+	url = https://github.com/yhcchaos/PCC-Uspace.git
 	branch = NSDI-2018
+[submodule "pantheon-modified/third_party/aurora/PCC-RL"]
+	path = pantheon-modified/third_party/aurora/PCC-RL
+	url = https://github.com/yhcchaos/PCC-RL.git
+	branch = master
+[submodule "pantheon-modified/third_party/aurora/PCC-Uspace"]
+	path = pantheon-modified/third_party/aurora/PCC-Uspace
+	url = https://github.com/yhcchaos/PCC-Uspace.git
+	branch = deep-learning
