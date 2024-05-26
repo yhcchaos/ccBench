@@ -370,7 +370,8 @@ class TunnelGraph(object):
        #                 loc='upper center', ncol=2, fontsize=25)
 
         fig.set_size_inches(12, 6)
-        for graph_format in ['.svg', '.png']:
+        #for graph_format in ['.svg', '.png']:
+        for graph_format in ['.png']:
             fig.savefig(self.throughput_graph+graph_format, bbox_inches='tight')
 
     def plot_delay_graph(self):
@@ -444,7 +445,8 @@ class TunnelGraph(object):
                         #markerscale=5, handletextpad=0)
 
         fig.set_size_inches(12, 6)
-        for graph_format in ['.svg', '.png']:
+        #for graph_format in ['.svg', '.png']:
+        for graph_format in ['.png']:
             fig.savefig(self.delay_graph+graph_format, bbox_inches='tight')
 
     def statistics_string(self):

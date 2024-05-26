@@ -129,8 +129,8 @@ CMT
                             bw2=$(echo "$bw * $scale" | bc -l)
                             bw2=$(echo "scale=0; $bw2/1" | bc)
                             link="$bw$dl_post"
-                            echo "./cc_solo_analysis.sh $cc dataset-gen $flow_num $run_times $flow_interval $del $qs "$loss" $link $time $bw $bw2 $setup_time"
-                            ./cc_solo_analysis.sh $cc dataset-gen $flow_num $run_times $flow_interval $del $qs "$loss" $link $time $bw $bw2 $setup_time &
+                            echo "./cc_solo_analysis.sh $cc dataset-gen $flow_num $run_times $flow_interval $del $qs "$loss" $link $time $bw $bw2 $setup_time $log_dir"
+                            ./cc_solo_analysis.sh $cc dataset-gen $flow_num $run_times $flow_interval $del $qs "$loss" $link $time $bw $bw2 $setup_time $log_dir&
                             cnt=$((cnt+1))
                             pids="$pids $!"
                         done
@@ -152,7 +152,7 @@ done
 ./clean-tmp.sh
 for cc in $schemes
 do
-    ./prepare-solo_league.sh $cc
+    ./prepare-solo_league.sh $cc $log_dir
 done
 ./clean-tmp2.sh
 

@@ -445,7 +445,7 @@ class Plot(object):
                 flow_data = perf_data[cc][run_id]['flow_data']
                 if flow_data is not None:
                     data_for_json[cc][run_id] = flow_data
-
+        '''
         if not self.no_graphs:
             self.plot_throughput_delay(data_for_plot,'95th percentile one-way delay (ms)','95')
             self.plot_throughput_delay(data_for_plot_90,'90th percentile one-way delay (ms)','90')
@@ -457,7 +457,7 @@ class Plot(object):
             self.plot_throughput_delay_linear(data_for_plot_mean,'Mean one-way delay (ms)','mean')
             self.plot_throughput_delay_linear(data_for_plot_avg,'Avg one-way delay (ms)','avg')
 
-
+        '''
         plt.close('all')
 
         perf_path = path.join(self.data_dir, 'pantheon_perf.json')

@@ -445,9 +445,9 @@ class Test(object):
 
             port = utils.get_open_port()
 
-            first_cmd = 'tunnel %s python %s receiver %s\n' % (
+            first_cmd = 'tunnel %s python2 %s receiver %s\n' % (
                 tun_id, first_src, port)
-            second_cmd = 'tunnel %s python %s sender %s %s %s\n' % (
+            second_cmd = 'tunnel %s python2 %s sender %s %s %s\n' % (
                 tun_id, second_src, recv_pri_ip, port, self.srate)
 
             recv_manager.stdin.write(first_cmd.encode('utf-8'))
@@ -462,9 +462,9 @@ class Test(object):
 
             port = utils.get_open_port()
 
-            first_cmd = 'tunnel %s python %s sender %s %s %s %s %s %s %s %s %s %s %s %s\n' % (
+            first_cmd = 'tunnel %s python2 %s sender %s %s %s %s %s %s %s %s %s %s %s %s\n' % (
                 tun_id, first_src, port,tun_id-1,self.orcakey,self.orcakey_rl,self.orcalearn,self.comment,self.tcpgen_cc,self.flows,self.bw,self.basetime_fld,self.bw2,self.trace_period)
-            second_cmd = 'tunnel %s python %s receiver %s %s\n' % (
+            second_cmd = 'tunnel %s python2 %s receiver %s %s\n' % (
                 tun_id, second_src, send_pri_ip, port)
 
             send_manager.stdin.write(first_cmd.encode('utf-8'))
@@ -487,9 +487,9 @@ class Test(object):
 
                 port = utils.get_open_port()
 
-                first_cmd = 'tunnel %s python %s receiver %s\n' % (
+                first_cmd = 'tunnel %s python2 %s receiver %s\n' % (
                     tun_id, first_src, port)
-                second_cmd = 'tunnel %s python %s sender %s %s\n' % (
+                second_cmd = 'tunnel %s python2 %s sender %s %s\n' % (
                     tun_id, second_src, recv_pri_ip, port)
 
                 recv_manager.stdin.write(first_cmd.encode('utf-8'))
@@ -503,9 +503,9 @@ class Test(object):
 
                 port = utils.get_open_port()
 
-                first_cmd = 'tunnel %s python %s sender %s\n' % (
+                first_cmd = 'tunnel %s python2 %s sender %s\n' % (
                     tun_id, first_src, port)
-                second_cmd = 'tunnel %s python %s receiver %s %s\n' % (
+                second_cmd = 'tunnel %s python2 %s receiver %s %s\n' % (
                     tun_id, second_src, send_pri_ip, port)
 
                 send_manager.stdin.write(first_cmd.encode('utf-8'))

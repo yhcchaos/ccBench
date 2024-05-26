@@ -1,3 +1,10 @@
 [submodule "mahimahi"]
 	path = mahimahi
 	url = git@github.com:yhchaos/mahimahi.git
+[submodule "pantheon-modified/third_party/indigo"]
+	path = pantheon-modified/third_party/indigo
+	url = git@github.com:StanfordSNR/indigo.git
+[submodule "pantheon-modified/third_party/vivace"]
+	path = pantheon-modified/third_party/vivace
+	url = https://github.com/PCCproject/PCC-Uspace.git
+	branch = NSDI-2018

@@ -1,7 +1,7 @@
-if [ $# -ne 13 ]
+if [ $# -ne 14 ]
 then
     echo "usage:"
-    echo "\t$0 scheme [vegas bbr reno cubic ...] [log comment] [num of flows] [num of runs] [interval bw flows] [one-way delay] [qs] [loss] [down link: e.g., "48" for wired48 link] [duration] [BW (Mbps)] [BW2 (Mbps)] [setup_time]"
+    echo "\t$0 scheme [vegas bbr reno cubic ...] [log comment] [num of flows] [num of runs] [interval bw flows] [one-way delay] [qs] [loss] [down link: e.g., "48" for wired48 link] [duration] [BW (Mbps)] [BW2 (Mbps)] [setup_time] [log_dir]"
     exit
 fi
 scheme=$1
@@ -17,6 +17,7 @@ duration=${10}
 bw=${11}
 bw2=${12}
 setup_time=${13}
+log_dir=${14}
 trace_period=7
 
 basetimestamp_fld=`pwd -P`
@@ -30,4 +31,4 @@ log=${comment}-$scheme-$num_of_flows-$down-$lat-$qs-$loss
 
 echo "************************Analyzing $log*********************************"
 #Overall Analysis ...
-../analysis/analyze.py --data-dir /data/4.9-more-flows/real-time-pictures/$log/
+../analysis/analyze.py --data-dir $log_dir/$log/

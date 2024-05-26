@@ -31,7 +31,7 @@ def make_sure_dir_exists(d):
             raise
 
 
-tmp_dir = path.join('/data', 'pantheon', 'ccBench', 'tmp')
+tmp_dir = path.join('/data', 'pantheon', 'tmp')
 make_sure_dir_exists(tmp_dir)
 
 
@@ -104,7 +104,7 @@ def verify_schemes_with_meta(schemes, meta):
 def who_runs_first(cc):
     cc_src = path.join(context.src_dir, 'wrappers', cc + '.py')
 
-    cmd = [cc_src, 'run_first']
+    cmd = ['python2', cc_src, 'run_first']
     run_first = check_output(cmd).strip()
     if run_first == 'receiver':
         run_second = 'sender'

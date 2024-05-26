@@ -5,8 +5,8 @@ then
 fi
 
 cc=$1
-
-data="/data/4.6-stageBW/vegas"
+log_dir=${2}
+data=$log_dir
 pids=""
 sys_cpu_cnt=`lscpu | grep "^CPU(s):" | awk '{print $2}'`
 cpu_num=$sys_cpu_cnt
