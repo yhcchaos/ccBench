@@ -462,8 +462,8 @@ class Test(object):
 
             port = utils.get_open_port()
 
-            first_cmd = 'tunnel %s python2 %s sender %s %s %s %s %s %s %s %s %s %s %s %s\n' % (
-                tun_id, first_src, port,tun_id-1,self.orcakey,self.orcakey_rl,self.orcalearn,self.comment,self.tcpgen_cc,self.flows,self.bw,self.basetime_fld,self.bw2,self.trace_period)
+            first_cmd = 'tunnel %s python2 %s sender %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s\n' % (
+                tun_id, first_src, port,self.actor_id,tun_id,self.orcakey,self.orcakey_rl,self.orcalearn,self.comment,self.tcpgen_cc,self.flows,self.bw,self.basetime_fld,self.bw2,self.trace_period,self.data_dir,self.run_id)
             second_cmd = 'tunnel %s python2 %s receiver %s %s\n' % (
                 tun_id, second_src, send_pri_ip, port)
 

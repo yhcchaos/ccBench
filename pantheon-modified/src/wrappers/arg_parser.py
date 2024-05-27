@@ -31,6 +31,7 @@ def parse_wrapper_args(run_first):
     else:
         sender_parser.add_argument('port', help='port to listen on')
         sender_parser.add_argument('actor_id', help='Orca Actor Id (if existed!)')
+        sender_parser.add_argument('flow_id', help='flow id')
         sender_parser.add_argument('orcakey', help='Orca 1st key')
         sender_parser.add_argument('orcakey_rl', help='Orca 2nd key')
         sender_parser.add_argument('orcalearn', help='Orca Learning')
@@ -41,6 +42,8 @@ def parse_wrapper_args(run_first):
         sender_parser.add_argument('basetime_fld', help='basetimestamp\'s foder')
         sender_parser.add_argument('bw2', help='Second BW on the step-function traces')
         sender_parser.add_argument('trace_period', help='Period of change of the BW on trace files')
+        sender_parser.add_argument('data_dir', help='data dir')
+        sender_parser.add_argument('run_id', help='run id')
         #sender_parser.add_argument('duration', help='Sage & Tcp DatasetGen: overall time for sending traffic')
 
         receiver_parser.add_argument(

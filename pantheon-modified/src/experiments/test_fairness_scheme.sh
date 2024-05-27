@@ -5,14 +5,14 @@ cpu_num=4
 #schemes="sage orca indigo dbbr"
 log_dir=$1
 mkdir -p $log_dir
-schemes="indigo vivace"
+schemes="sage"
 # 350+
 pids=""
 # schemes="sage mvfst_rl"
 #bbr-vegas-reno-highspeed-illinois-westwood-yeah-htcp cubic
 #schemes="cdg hybla veno bic"
 # schemes="vegas bbr"
-setup_time=5
+setup_time=10
 #loss_list="0 0.0001 0.001 0.01 0.05" #5
 #loss_list="0 0.001"
 #loss_list="0"
