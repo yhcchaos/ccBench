@@ -19,3 +19,6 @@
 [submodule "pantheon-modified/third_party/sage"]
 	path = pantheon-modified/third_party/sage
 	url = git@github.com:yhcchaos/sage-fabacc.git
+[submodule "pantheon-modified/third_party/pantheon_tunnel"]
+	path = pantheon-modified/third_party/pantheon_tunnel
+	url = https://github.com/yhcchaos/pantheon_tunnel.git

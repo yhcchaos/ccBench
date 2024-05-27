@@ -10,7 +10,7 @@ pids=""
 # schemes="sage mvfst_rl"
 #bbr-vegas-reno-highspeed-illinois-westwood-yeah-htcp cubic
 #schemes="cdg hybla veno bic"
-schemes="indigo vivace"
+schemes="aurora"
 setup_time=10
 #loss_list="0 0.0001 0.001 0.01 0.05" #5
 #loss_list="0 0.001"
