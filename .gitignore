@@ -5,7 +5,7 @@ pantheon-modified/src/experiments/cellular-traces
 pantheon-modified/src/experiments/traces
 pantheon-modified/src/experiments/nohup.out
 pantheon-modified/src/experiments/ss.log
-
+pantheon-modified/src/experiments/core*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

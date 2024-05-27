@@ -13,7 +13,7 @@ for b in bw:
     elif b == 96:
         scales = [0.5, 1, 2]
     else:
-        scales = [0.5]
+        scales = [0.5, 1]
     for scale in scales:
         os.makedirs('traces',exist_ok=True)
         trace_file = os.path.join("traces", 'wired' + str(b) + '-x' + str(scale) + '-' + str(changeTime))
