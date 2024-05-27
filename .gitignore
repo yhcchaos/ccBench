@@ -6,6 +6,7 @@ pantheon-modified/src/experiments/traces
 pantheon-modified/src/experiments/nohup.out
 pantheon-modified/src/experiments/ss.log
 pantheon-modified/src/experiments/core*
+pantheon-modified/src/experiments/pcc_log.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

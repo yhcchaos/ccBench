@@ -30,7 +30,7 @@ def main():
         check_call(['pip3', 'install', 'tensorflow==1.14.0'])
         check_call(['pip3', 'install', 'gym==0.15.3'])
         check_call(['pip3', 'install', 'stable-baselines==2.4.0'])
-        check_call(['make'], cwd=src_dir)
+        check_call(['make'], cwd=env_src_dir)
         return
 
     if args.option == 'receiver':
@@ -46,7 +46,7 @@ def main():
                "-pyhelper=loaded_client",
                "-pypath=" + os.path.join(rl_dir,"src/udt-plugins/testing/"),
                "--history-len=10", "--pcc-utility-calc=linear",
-               "--model-path=/home/yhchaos/ccBench/pantheon-modified/third_party/model_A/"]
+               "--model-path="+os.path.join(rl_dir, "src/gym/model_A")]
         check_call(cmd)
         return
 
