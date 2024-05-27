@@ -1,11 +1,11 @@
 #!/bin/bash
 #./system_setup.sh
-cpu_num=5
+cpu_num=4
 #schemes="c2tcp copa vivace ledbat sprout"
 #schemes="sage orca indigo dbbr"
 log_dir=$1
 mkdir -p $log_dir
-schemes="vivace"
+schemes="indigo vivace"
 # 350+
 pids=""
 # schemes="sage mvfst_rl"
@@ -21,11 +21,11 @@ setup_time=5
 #del_list="5 10 20 40 80" #5
 
 loss_list="0"
-flow_num_list="1 2 3" #3
-bw_list="24" #5
+flow_num_list="1" #3
+bw_list="12" #5
 del_list="10" #5
 #total_envs=41600
-total_envs=3
+total_envs=2
 time=60
 run_times=1
 flow_interval=0

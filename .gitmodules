@@ -16,3 +16,6 @@
 	path = pantheon-modified/third_party/aurora/PCC-Uspace
 	url = https://github.com/yhcchaos/PCC-Uspace.git
 	branch = deep-learning
+[submodule "pantheon-modified/third_party/pantheon_tunnel"]
+	path = pantheon-modified/third_party/pantheon_tunnel
+	url = https://github.com/yhcchaos/pantheon_tunnel.git
