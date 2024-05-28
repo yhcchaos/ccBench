@@ -88,6 +88,8 @@ do
     done
 done
 sleep 150
+sys_cpu_cnt=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
+cpu_num=$sys_cpu_cnt
 cnt=0
 for flow_num in $flow_num_list
 do
