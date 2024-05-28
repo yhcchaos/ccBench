@@ -10,8 +10,8 @@ pids=""
 # schemes="sage mvfst_rl"
 #bbr-vegas-reno-highspeed-illinois-westwood-yeah-htcp cubic
 #schemes="cdg hybla veno bic"
-schemes="aurora"
-setup_time=10
+schemes="ledbat copa sprout"
+setup_time=5
 #loss_list="0 0.0001 0.001 0.01 0.05" #5
 #loss_list="0 0.001"
 #loss_list="0"
@@ -74,7 +74,7 @@ do
                                         wait $pid
                                     done
                                     pids=""
-                                    ./clean-tmp.sh
+                                    ./clean-tmp.sh $log_dir
                                 fi
                             else
                                 cnt=$((cnt+1))
@@ -143,7 +143,7 @@ CMT
                                 wait $pid
                             done
                             pids=""
-                            ./clean-tmp.sh
+                            ./clean-tmp.sh ${log_dir}
                         fi
                     done
                 done

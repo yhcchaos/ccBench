@@ -1,6 +1,6 @@
-if [ $# -ne 1 ]
+if [ $# -ne 2 ]
 then
-    echo "usage:$0 scheme"
+    echo "usage:$0 scheme log_dir"
     exit
 fi
 

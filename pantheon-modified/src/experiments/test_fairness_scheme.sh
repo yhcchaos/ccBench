@@ -1,11 +1,11 @@
 #!/bin/bash
 #./system_setup.sh
-cpu_num=4
+cpu_num=3
 #schemes="c2tcp copa vivace ledbat sprout"
 #schemes="sage orca indigo dbbr"
 log_dir=$1
 mkdir -p $log_dir
-schemes="sage"
+schemes="ledbat sprout copa"
 # 350+
 pids=""
 # schemes="sage mvfst_rl"
@@ -25,7 +25,7 @@ flow_num_list="1" #3
 bw_list="12" #5
 del_list="10" #5
 #total_envs=41600
-total_envs=2
+total_envs=3
 time=60
 run_times=1
 flow_interval=0
@@ -76,7 +76,7 @@ do
                                         wait $pid
                                     done
                                     pids=""
-                                    ./clean-tmp.sh
+                                    ./clean-tmp.sh $log_dir
                                 fi
                             else
                                 cnt=$((cnt+1))
@@ -152,7 +152,7 @@ CMT
         done
     done
 done
-./clean-tmp.sh
+./clean-tmp.sh $log_dir
 for cc in $schemes
 do
     ./prepare-solo_league.sh $cc $log_dir
