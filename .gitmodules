@@ -25,3 +25,6 @@
 [submodule "pantheon-modified/third_party/ledbat"]
 	path = pantheon-modified/third_party/ledbat
 	url = https://github.com/bittorrent/libutp.git
+[submodule "pantheon-modified/third_party/sprout"]
+	path = pantheon-modified/third_party/sprout
+	url = https://github.com/keithw/sprout.git
