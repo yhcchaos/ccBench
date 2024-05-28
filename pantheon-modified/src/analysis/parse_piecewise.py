@@ -11,6 +11,7 @@ class ParsePiecewise(object):
         self.tunnel_log = tunnel_log
         self.win_start_time_s = win_start_time_s
         self.win_end_time_s = win_end_time_s
+        self.start = -1
 
     def parse_tunnel_log(self):
         tunlog = open(self.tunnel_log)
@@ -44,12 +45,14 @@ class ParsePiecewise(object):
 
             items = line.split()
             ts = float(items[0])
+            if self.start == -1:
+                self.start = ts
             event_type = items[1]
             num_bits = int(items[2]) * 8
 
-            if ts<=self.win_start_time_s*1000:
+            if ts<=self.start + self.win_start_time_s*1000:
                 continue
-            if ts>=self.win_end_time_s*1000:
+            if ts>=self.start + self.win_end_time_s*1000:
                 break
 
             if first_ts is None:

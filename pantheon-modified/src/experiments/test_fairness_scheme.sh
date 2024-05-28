@@ -1,18 +1,26 @@
 #!/bin/bash
 #./system_setup.sh
+<<<<<<< Updated upstream
 cpu_num=3
+=======
+cpu_num=5
+>>>>>>> Stashed changes
 #schemes="c2tcp copa vivace ledbat sprout"
 #schemes="sage orca indigo dbbr"
 log_dir=$1
 mkdir -p $log_dir
+<<<<<<< Updated upstream
 schemes="ledbat sprout copa"
+=======
+schemes="aurora"
+>>>>>>> Stashed changes
 # 350+
 pids=""
 # schemes="sage mvfst_rl"
 #bbr-vegas-reno-highspeed-illinois-westwood-yeah-htcp cubic
 #schemes="cdg hybla veno bic"
 # schemes="vegas bbr"
-setup_time=10
+setup_time=3
 #loss_list="0 0.0001 0.001 0.01 0.05" #5
 #loss_list="0 0.001"
 #loss_list="0"
@@ -21,12 +29,17 @@ setup_time=10
 #del_list="5 10 20 40 80" #5
 
 loss_list="0"
-flow_num_list="1" #3
-bw_list="12" #5
-del_list="10" #5
+flow_num_list="3" #3
+bw_list="12 24 48 96 192" #5
+del_list="20" #5
 #total_envs=41600
+<<<<<<< Updated upstream
 total_envs=3
 time=60
+=======
+total_envs=5
+time=30
+>>>>>>> Stashed changes
 run_times=1
 flow_interval=0
 cnt=0
@@ -89,6 +102,7 @@ do
         done
     done
 done
+
 sleep 30
 
 cnt=0
@@ -152,9 +166,15 @@ CMT
         done
     done
 done
+<<<<<<< Updated upstream
 ./clean-tmp.sh $log_dir
+=======
+./clean-tmp.sh
+:<<CMT
+>>>>>>> Stashed changes
 for cc in $schemes
 do
     ./prepare-solo_league.sh $cc $log_dir
 done
 ./clean-tmp2.sh
+CMT

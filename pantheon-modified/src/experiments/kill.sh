@@ -14,6 +14,13 @@ for pid in $solo_pids; do
     kill -15 $pid
 done
 
+solo_pids=$(ps aux | grep 'pantheon' | grep -v 'grep' | awk '{print $2}')
+
+for pid in $solo_pids; do
+    echo "Terminating process $pid (solo_runall)"
+    kill -15 $pid
+done
+
 solo_pids=$(ps aux | grep 'analysis/plot.py' | grep -v 'grep' | awk '{print $2}')
 
 for pid in $solo_pids; do
