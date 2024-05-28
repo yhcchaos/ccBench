@@ -12,7 +12,7 @@ import context
 def main():
     args = arg_parser.receiver_first()
 
-    cc_repo = path.join(context.third_party_dir, 'libutp')
+    cc_repo = path.join(context.third_party_dir, 'ledbat')
     src = path.join(cc_repo, 'ucat-static')
 
     if args.option == 'setup':

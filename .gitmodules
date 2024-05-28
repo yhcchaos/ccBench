@@ -22,3 +22,6 @@
 [submodule "pantheon-modified/third_party/pantheon_tunnel"]
 	path = pantheon-modified/third_party/pantheon_tunnel
 	url = https://github.com/yhcchaos/pantheon_tunnel.git
+[submodule "pantheon-modified/third_party/ledbat"]
+	path = pantheon-modified/third_party/ledbat
+	url = https://github.com/bittorrent/libutp.git
