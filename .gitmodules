@@ -28,3 +28,6 @@
 [submodule "pantheon-modified/third_party/sprout"]
 	path = pantheon-modified/third_party/sprout
 	url = https://github.com/keithw/sprout.git
+[submodule "pantheon-modified/third_party/genericCC"]
+	path = pantheon-modified/third_party/genericCC
+	url = https://github.com/venkatarun95/genericCC.git
